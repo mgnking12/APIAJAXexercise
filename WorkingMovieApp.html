@@ -39,6 +39,7 @@
 	function displayMovieInfo(){
 
 		var movie = $(this).attr('data-name');
+		console.log(movie);
 		var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json";
 		
 		// Creates AJAX call for the specific movie being 
@@ -46,7 +47,6 @@
 			console.log(response);
 		$("#moviesView").html("<p>Rated: " +response.Rated+ "<br>Released: " +response.Released+ "<br>The Plot: " + response.Plot + "</p><img src=" + response.Poster + ">");
 		//$("#moviesView").append("<img src='" + response.poster + "'/>");
-			// YOUR CODE GOES HERE!!!
 
 		});
 
